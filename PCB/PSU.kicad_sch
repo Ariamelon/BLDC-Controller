@@ -1,0 +1,96 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid a622c046-fbde-4ad0-9203-fcdf8621e8a0)
+
+  (paper "A4")
+
+  (lib_symbols
+    (symbol "power:VCC" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "VCC" (at 0 3.81 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"VCC\"" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "VCC_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "VCC_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "VCC" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+  )
+
+
+  (symbol (lib_id "power:VCC") (at 71.12 50.8 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 686cba8e-4fa7-4f43-b6f7-a406537e445b)
+    (property "Reference" "#PWR01" (at 71.12 54.61 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC" (at 71.12 46.6669 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 71.12 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 71.12 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid a300e874-78a8-4c38-9f31-47a76cdcdcf5))
+    (instances
+      (project "BLDC-Controller"
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
+          (reference "#PWR01") (unit 1)
+        )
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
+          (reference "#PWR015") (unit 1)
+        )
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
+          (reference "#PWR027") (unit 1)
+        )
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/69c4c952-9785-4038-8411-bd74bb4cf876"
+          (reference "#PWR018") (unit 1)
+        )
+      )
+    )
+  )
+)
