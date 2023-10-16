@@ -1587,15 +1587,6 @@
     (pin "2" (uuid 8c52825f-75e0-4a6f-b447-f7ec5fb837c7))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "C4") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "C10") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "C15") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "C37") (unit 1)
         )
@@ -1697,15 +1688,6 @@
     (pin "2" (uuid 292126ad-12d4-420d-99bc-656e92e832e6))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "R5") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "R14") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "R23") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "R8") (unit 1)
         )
@@ -1757,15 +1739,6 @@
     (pin "2" (uuid 89129bb0-a419-40ae-8419-7a1af33cd6b9))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "C4") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "C10") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "C15") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "C34") (unit 1)
         )
@@ -1822,15 +1795,6 @@
     (pin "2" (uuid baed8370-14a6-41b9-b7f0-dc6d21231e60))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "R5") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "R14") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "R23") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "R5") (unit 1)
         )
@@ -1887,15 +1851,6 @@
     (pin "2" (uuid 0d13111d-0ef1-41b5-a080-0c8800b10a0b))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "C2") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "C8") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "C13") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "C13") (unit 1)
         )
@@ -1952,15 +1907,6 @@
     (pin "2" (uuid 59978801-3f20-4f50-a42c-7d92fffeefda))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "R6") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "R15") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "R24") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "R16") (unit 1)
         )
@@ -1987,15 +1933,6 @@
     (pin "2" (uuid 6c714133-3769-4cad-a1ad-ca0970105ea9))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "C2") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "C8") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "C13") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "C3") (unit 1)
         )
@@ -2022,15 +1959,6 @@
     (pin "2" (uuid 3e4e29d9-ef1a-410e-818c-74d472e4269a))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "C2") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "C8") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "C13") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "C2") (unit 1)
         )
@@ -2057,15 +1985,6 @@
     (pin "2" (uuid 54835147-6a23-496d-aec7-001af6e68561))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "R5") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "R14") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "R23") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "R15") (unit 1)
         )
@@ -2092,15 +2011,6 @@
     (pin "2" (uuid 34889d13-45dc-47c6-b19f-e07bd1756679))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "C1") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "C7") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "C12") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "C40") (unit 1)
         )
@@ -2127,15 +2037,6 @@
     (pin "2" (uuid 14f16003-4237-4208-8190-df8dab14741f))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "R5") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "R14") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "R23") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "R13") (unit 1)
         )
@@ -2165,15 +2066,6 @@
     (pin "5" (uuid 3adb269c-344e-4035-9cfb-b0d43698609c))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "U6") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "U2") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "U4") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "U2") (unit 1)
         )
@@ -2265,15 +2157,6 @@
     (pin "2" (uuid 727efc36-3711-4e1e-9ab4-1f7b129c1012))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "C18") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "C16") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "C17") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "C36") (unit 1)
         )
@@ -2300,15 +2183,6 @@
     (pin "2" (uuid 9e655bbf-8fa0-4b87-89c5-8c48d96601fc))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "R5") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "R14") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "R23") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "R23") (unit 1)
         )
@@ -2417,15 +2291,6 @@
     (pin "2" (uuid 549340ce-0364-47ae-95c8-a1ca3798f93e))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "R6") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "R15") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "R24") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "R6") (unit 1)
         )
@@ -2477,15 +2342,6 @@
     (pin "2" (uuid 97a5ba83-7177-4e1f-adb3-68aafd12f537))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "R5") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "R14") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "R23") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "R17") (unit 1)
         )
@@ -2512,15 +2368,6 @@
     (pin "2" (uuid 51a58b0f-a921-45f7-9cc8-ff6f7a0ddbb9))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "C4") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "C10") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "C15") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "C4") (unit 1)
         )
@@ -2547,15 +2394,6 @@
     (pin "2" (uuid 2bda8569-79a0-43f2-825c-d66c959b49d9))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "R6") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "R15") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "R24") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "R14") (unit 1)
         )
@@ -2581,15 +2419,6 @@
     (pin "1" (uuid 6001e212-bde6-4dfc-892e-866f5df39c81))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "#PWR09") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "#PWR022") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "#PWR034") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "#PWR05") (unit 1)
         )
@@ -2616,15 +2445,6 @@
     (pin "2" (uuid 39c9ac94-08b3-42d7-a347-07c1b7e96dbd))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "C1") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "C7") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "C12") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "C39") (unit 1)
         )
@@ -2650,15 +2470,6 @@
     (pin "1" (uuid eb809e37-4b60-4407-90c9-f7ded3adf75b))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "#PWR09") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "#PWR022") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "#PWR034") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "#PWR09") (unit 1)
         )
@@ -2684,15 +2495,6 @@
     (pin "1" (uuid 2a30a530-8394-457d-86ec-9d9694033bfc))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "#PWR016") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "#PWR08") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "#PWR010") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "#PWR017") (unit 1)
         )
@@ -2718,15 +2520,6 @@
     (pin "1" (uuid 4f0fac75-3e71-43e4-81f6-f72e64f817a9))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "#PWR012") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "#PWR024") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "#PWR036") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "#PWR012") (unit 1)
         )
@@ -2753,15 +2546,6 @@
     (pin "2" (uuid e91b87ea-a85d-4855-904c-fc0512c020ca))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "C2") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "C8") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "C13") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "C8") (unit 1)
         )
@@ -2787,15 +2571,6 @@
     (pin "1" (uuid 1728e7f3-2330-4933-aea0-b8dc081ff6a5))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "#PWR02") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "#PWR016") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "#PWR028") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "#PWR02") (unit 1)
         )
@@ -2822,15 +2597,6 @@
     (pin "2" (uuid 69ef84ea-b618-44da-98f3-bf5046e853bf))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "R13") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "R17") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "R26") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "R7") (unit 1)
         )
@@ -2856,15 +2622,6 @@
     (pin "1" (uuid fd7f11f9-e26d-4a18-ba18-411565df56e3))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "#PWR06") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "#PWR021") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "#PWR033") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "#PWR07") (unit 1)
         )
@@ -2917,15 +2674,6 @@
     (pin "2" (uuid 8ec6527a-4c39-4ec4-b360-f112cec71cef))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "R5") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "R14") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "R23") (unit 1)
-        )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
           (reference "R18") (unit 1)
         )

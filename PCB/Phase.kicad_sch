@@ -186,26 +186,68 @@
         )
       )
     )
-    (symbol "Device:Q_NMOS_GDS" (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "Q" (at 5.08 1.27 0)
+    (symbol "Device:R_Small" (pin_numbers hide) (pin_names (offset 0.254) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "R" (at 0.762 0.508 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
-      (property "Value" "Q_NMOS_GDS" (at 5.08 -1.27 0)
+      (property "Value" "R_Small" (at 0.762 -1.016 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
-      (property "Footprint" "" (at 5.08 2.54 0)
+      (property "Footprint" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "Datasheet" "~" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "transistor NMOS N-MOS N-MOSFET" (at 0 0 0)
+      (property "ki_keywords" "R resistor" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "N-MOSFET transistor, gate/drain/source" (at 0 0 0)
+      (property "ki_description" "Resistor, small symbol" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "Q_NMOS_GDS_0_1"
+      (property "ki_fp_filters" "R_*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "R_Small_0_1"
+        (rectangle (start -0.762 1.778) (end 0.762 -1.778)
+          (stroke (width 0.2032) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "R_Small_1_1"
+        (pin passive line (at 0 2.54 270) (length 0.762)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 0 -2.54 90) (length 0.762)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "Transistor_FET:BSC13DN30NSFD" (pin_names hide) (in_bom yes) (on_board yes)
+      (property "Reference" "Q" (at 5.08 1.905 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Value" "BSC13DN30NSFD" (at 5.08 0 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Footprint" "Package_TO_SOT_SMD:TDSON-8-1" (at 5.08 -1.905 0)
+        (effects (font (size 1.27 1.27) italic) (justify left) hide)
+      )
+      (property "Datasheet" "https://www.infineon.com/dgdl/Infineon-BSC13DN30NSFD-DS-v02_01-EN.pdf?fileId=5546d46259b0420a0159d5c940fc0d9a" (at 0 0 90)
+        (effects (font (size 1.27 1.27)) (justify left) hide)
+      )
+      (property "ki_keywords" "NexFET Power MOSFET N-MOS" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "16A Id, 300V Vds, OptiMOS N-Channel Power MOSFET, 130mOhm Ron, Qg (typ) 30.0nC, PG-TDSON-8" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "TDSON*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "BSC13DN30NSFD_0_1"
         (polyline
           (pts
             (xy 0.254 0)
@@ -316,57 +358,26 @@
           (fill (type outline))
         )
       )
-      (symbol "Q_NMOS_GDS_1_1"
-        (pin input line (at -5.08 0 0) (length 2.54)
-          (name "G" (effects (font (size 1.27 1.27))))
+      (symbol "BSC13DN30NSFD_1_1"
+        (pin passive line (at 2.54 -5.08 90) (length 2.54)
+          (name "S" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 2.54 5.08 270) (length 2.54)
-          (name "D" (effects (font (size 1.27 1.27))))
+        (pin passive line (at 2.54 -5.08 90) (length 2.54) hide
+          (name "S" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 2.54 -5.08 90) (length 2.54)
+        (pin passive line (at 2.54 -5.08 90) (length 2.54) hide
           (name "S" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27))))
         )
-      )
-    )
-    (symbol "Device:R_Small" (pin_numbers hide) (pin_names (offset 0.254) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "R" (at 0.762 0.508 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Value" "R_Small" (at 0.762 -1.016 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "R resistor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Resistor, small symbol" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "R_*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "R_Small_0_1"
-        (rectangle (start -0.762 1.778) (end 0.762 -1.778)
-          (stroke (width 0.2032) (type default))
-          (fill (type none))
+        (pin passive line (at -5.08 0 0) (length 2.54)
+          (name "G" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27))))
         )
-      )
-      (symbol "R_Small_1_1"
-        (pin passive line (at 0 2.54 270) (length 0.762)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 -2.54 90) (length 0.762)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
+        (pin passive line (at 2.54 5.08 270) (length 2.54)
+          (name "D" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -943,7 +954,7 @@
   (symbol (lib_id "Device:C_Small") (at 86.36 91.44 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 111e9824-bc30-4a13-a114-3d546d09664d)
-    (property "Reference" "C21" (at 84.0359 90.2215 0)
+    (property "Reference" "C23" (at 84.0359 90.2215 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100n" (at 84.0359 92.6457 0)
@@ -955,18 +966,18 @@
     (property "Datasheet" "~" (at 86.36 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 67afdf67-e6eb-4a6c-9318-328677089f0c))
-    (pin "2" (uuid 63ee8301-bec8-49a4-bcea-3f278c1a4621))
+    (pin "1" (uuid c7576e25-366b-4740-86ac-484f04ccee6b))
+    (pin "2" (uuid 3e491026-a90d-41f4-952b-b88495596ce8))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "C21") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "C11") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "C19") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
           (reference "C20") (unit 1)
+        )
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "C28") (unit 1)
         )
       )
     )
@@ -975,7 +986,7 @@
   (symbol (lib_id "Device:C_Small") (at 208.28 78.74 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1671dfde-4d03-4374-a987-b39960aae7ea)
-    (property "Reference" "C33" (at 210.6041 76.3094 0)
+    (property "Reference" "C29" (at 210.6041 76.3094 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "4u7" (at 210.6041 78.7336 0)
@@ -990,18 +1001,18 @@
     (property "Voltage" "100V" (at 210.6041 81.1578 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (pin "1" (uuid 5ce42d96-d751-4409-82d3-9aefcf2cbb9a))
-    (pin "2" (uuid 2d834c17-bcf2-4bc6-adea-e9ae00b25bfd))
+    (pin "1" (uuid 74347ea0-9552-474e-a03d-c8231c0b4718))
+    (pin "2" (uuid f5542509-222e-47e5-9bc5-4eb8776fdceb))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "C33") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "C7") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "C31") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "C17") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "C32") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "C25") (unit 1)
         )
       )
     )
@@ -1025,14 +1036,14 @@
     (pin "1" (uuid 9b320677-2c95-47af-8a46-c740212fc437))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "#PWR039") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "#PWR010") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "#PWR037") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "#PWR022") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "#PWR038") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "#PWR029") (unit 1)
         )
       )
     )
@@ -1041,7 +1052,7 @@
   (symbol (lib_id "Device:R_Small") (at 144.78 114.3 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 33788977-6f77-4128-a649-15431ff2be55)
-    (property "Reference" "R2" (at 144.78 109.4191 90)
+    (property "Reference" "R24" (at 144.78 109.4191 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "22R" (at 144.78 111.8433 90)
@@ -1053,18 +1064,18 @@
     (property "Datasheet" "~" (at 144.78 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 467fb397-afde-4ba0-b592-6ffd334ea0b1))
-    (pin "2" (uuid 5a75c604-7487-4cb3-9fe6-68a4bff2c1aa))
+    (pin "1" (uuid b17725d5-5464-4f3a-adff-83ad39105197))
+    (pin "2" (uuid cbb57b44-fb3f-4471-824b-a15bfeddb1c4))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "R2") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "R4") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "R10") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "R19") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "R20") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "R25") (unit 1)
         )
       )
     )
@@ -1073,7 +1084,7 @@
   (symbol (lib_id "Device:C_Small") (at 76.2 91.44 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 33a47373-efea-4f13-a24e-bfedf73e0f37)
-    (property "Reference" "C18" (at 73.8759 90.2215 0)
+    (property "Reference" "C22" (at 73.8759 90.2215 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "4u7" (at 73.8759 92.6457 0)
@@ -1085,18 +1096,53 @@
     (property "Datasheet" "~" (at 76.2 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 6a34bcb0-9ba8-4dd1-98ea-ed60dc84c85c))
-    (pin "2" (uuid dce8def7-99d8-4431-a207-3aac9ef8b7a7))
+    (pin "1" (uuid 23133199-eb50-484a-8970-0191a1dc9dcc))
+    (pin "2" (uuid d1d525a1-f875-4cd2-8ae1-fd8e6381ac58))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "C18") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "C10") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "C16") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "C19") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "C17") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "C27") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Transistor_FET:BSC13DN30NSFD") (at 165.1 93.98 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 3f446cd4-2534-429e-b883-8f8ca9cdd38b)
+    (property "Reference" "Q1" (at 170.307 92.7679 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "TPHR8504PL" (at 170.307 95.1921 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Ariamelon-Package:SOP-8-Advance_5.0x6.0mm_P1.27mm" (at 170.18 95.885 0)
+      (effects (font (size 1.27 1.27) italic) (justify left) hide)
+    )
+    (property "Datasheet" "https://www.infineon.com/dgdl/Infineon-BSC13DN30NSFD-DS-v02_01-EN.pdf?fileId=5546d46259b0420a0159d5c940fc0d9a" (at 165.1 93.98 90)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (pin "1" (uuid 76a17c84-2941-4e15-a1e2-16619077d179))
+    (pin "2" (uuid f4af744d-7028-4356-9ba1-73e8e8b34ffb))
+    (pin "3" (uuid a1f19eb9-4342-4894-8b8d-0eb1be3926de))
+    (pin "4" (uuid d9f17215-9709-43b5-82c0-30026b7bc5f8))
+    (pin "5" (uuid d1c1c9b0-7dc5-4386-8e70-f86d13705e78))
+    (instances
+      (project "BLDC-Controller"
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "Q1") (unit 1)
+        )
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "Q3") (unit 1)
+        )
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "Q5") (unit 1)
         )
       )
     )
@@ -1120,14 +1166,49 @@
     (pin "1" (uuid 3416ff03-717f-466c-957e-bb0ee8f26726))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "#PWR04") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "#PWR013") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "#PWR014") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "#PWR023") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "#PWR026") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "#PWR030") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Transistor_FET:BSC13DN30NSFD") (at 165.1 114.3 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 4b072a52-fa5b-4d85-952d-5abf3731481b)
+    (property "Reference" "Q2" (at 170.307 113.0879 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "TPHR8504PL" (at 170.307 115.5121 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Ariamelon-Package:SOP-8-Advance_5.0x6.0mm_P1.27mm" (at 170.18 116.205 0)
+      (effects (font (size 1.27 1.27) italic) (justify left) hide)
+    )
+    (property "Datasheet" "https://www.infineon.com/dgdl/Infineon-BSC13DN30NSFD-DS-v02_01-EN.pdf?fileId=5546d46259b0420a0159d5c940fc0d9a" (at 165.1 114.3 90)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (pin "1" (uuid 8d336eae-cfd9-41d9-aab3-eed5786b2c56))
+    (pin "2" (uuid a5065473-9c59-47f9-8cc3-bbccb9491220))
+    (pin "3" (uuid dabedc91-e0f7-4f85-bbc0-deb84c4db78d))
+    (pin "4" (uuid 7a493e7b-307a-4270-afad-a358ae22720d))
+    (pin "5" (uuid 0e7c1d8a-7179-4adf-afa5-70e09f656e20))
+    (instances
+      (project "BLDC-Controller"
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "Q2") (unit 1)
+        )
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "Q4") (unit 1)
+        )
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "Q6") (unit 1)
         )
       )
     )
@@ -1151,13 +1232,13 @@
     (pin "1" (uuid eca715c7-8b6e-455d-987e-1d17025e9ec7))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "#PWR01") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "#PWR04") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "#PWR015") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "#PWR020") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
           (reference "#PWR027") (unit 1)
         )
       )
@@ -1182,14 +1263,14 @@
     (pin "1" (uuid 8acce87f-c763-4c9e-aaaa-de3e10a547ac))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "#PWR042") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "#PWR01") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "#PWR040") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "#PWR015") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "#PWR041") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "#PWR025") (unit 1)
         )
       )
     )
@@ -1213,14 +1294,14 @@
     (pin "1" (uuid 99aa37fc-0450-4eed-ba54-cdde94d5c903))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
           (reference "#PWR03") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "#PWR013") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "#PWR016") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "#PWR025") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "#PWR026") (unit 1)
         )
       )
     )
@@ -1229,7 +1310,7 @@
   (symbol (lib_id "Device:C_Small") (at 124.46 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 668999c5-7989-414d-80ff-91fd51fdd55c)
-    (property "Reference" "C1" (at 124.4663 88.2736 90)
+    (property "Reference" "C25" (at 124.4663 88.2736 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100n" (at 124.4663 90.6978 90)
@@ -1241,51 +1322,18 @@
     (property "Datasheet" "~" (at 124.46 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid eb96e333-f2a1-470c-8bcf-71507c47a2e8))
-    (pin "2" (uuid 0cf1ab66-2623-4d1b-9cb3-b35618a3c5b0))
+    (pin "1" (uuid c1f7b769-cba6-4d7d-b645-9387fbad7b37))
+    (pin "2" (uuid e64570eb-ea11-41bd-bee5-feb8a563bfec))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "C1") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "C7") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
           (reference "C12") (unit 1)
         )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:Q_NMOS_GDS") (at 165.1 114.3 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 6933c835-7ff5-46cc-a15c-be007a84c11c)
-    (property "Reference" "Q2" (at 165.1 106.68 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Value" "TPHR8504PL" (at 165.1 109.1042 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "" (at 170.18 111.76 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 165.1 114.3 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid a25d2a38-23ec-4e49-9025-95011b6d9f8d))
-    (pin "2" (uuid cbfe3870-00fa-4816-8df2-416cb780643a))
-    (pin "3" (uuid eab6ad16-56e1-4a02-94b5-78d192fe3caf))
-    (instances
-      (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "Q2") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "C21") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "Q4") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "Q6") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "C29") (unit 1)
         )
       )
     )
@@ -1309,14 +1357,14 @@
     (pin "1" (uuid 119ef684-11c9-435e-9349-419cec934c84))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "#PWR045") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "#PWR08") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "#PWR043") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "#PWR021") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "#PWR044") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "#PWR028") (unit 1)
         )
       )
     )
@@ -1325,7 +1373,7 @@
   (symbol (lib_id "Device:R_Small") (at 106.68 81.28 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 87e010c5-2051-40d3-89d7-a3caf35e9b14)
-    (property "Reference" "R30" (at 108.1786 80.0679 0)
+    (property "Reference" "R21" (at 108.1786 80.0679 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "2R2" (at 108.1786 82.4921 0)
@@ -1337,18 +1385,18 @@
     (property "Datasheet" "~" (at 106.68 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 47ca72e9-7949-4bea-99ea-c759632db5cc))
-    (pin "2" (uuid 6da5bae2-1e39-4215-b5c8-1c217472e915))
+    (pin "1" (uuid 16f89fd1-b3e7-44c7-8fd9-e898ba3d5ae8))
+    (pin "2" (uuid 34323dfe-864a-408c-97f1-a3ec9bd61706))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "R30") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "R1") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "R28") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "R10") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "R29") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "R21") (unit 1)
         )
       )
     )
@@ -1357,7 +1405,7 @@
   (symbol (lib_id "Device:R_Small") (at 149.86 93.98 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8def1c74-878a-4292-aa1c-b4d3d5354bdf)
-    (property "Reference" "R3" (at 149.86 98.8609 90)
+    (property "Reference" "R25" (at 149.86 98.8609 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10" (at 149.86 96.4367 90)
@@ -1369,18 +1417,18 @@
     (property "Datasheet" "~" (at 149.86 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 47f56192-bee0-4a15-aca4-0e5fa8e52708))
-    (pin "2" (uuid 569d57ec-af0d-4b65-905f-5fb3188f90ed))
+    (pin "1" (uuid fd1bae3f-e8b0-4902-b803-e4ca5d7e0249))
+    (pin "2" (uuid ffb2d089-e33a-4e97-94b1-858c3b895ab1))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
           (reference "R3") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "R11") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "R12") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "R21") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "R24") (unit 1)
         )
       )
     )
@@ -1389,7 +1437,7 @@
   (symbol (lib_id "Device:C_Small") (at 198.12 78.74 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a43d7a3d-70dd-4c35-b9b5-1602d1b989b8)
-    (property "Reference" "C30" (at 200.4441 76.3094 0)
+    (property "Reference" "C28" (at 200.4441 76.3094 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "4u7" (at 200.4441 78.7336 0)
@@ -1404,18 +1452,18 @@
     (property "Voltage" "100V" (at 200.4441 81.1578 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (pin "1" (uuid 96d43dc8-36bb-413f-84fc-525907c5385e))
-    (pin "2" (uuid 836dedc7-084a-4364-9110-10430cdf1788))
+    (pin "1" (uuid 3769f74b-bebe-4cc8-bfa8-91d58f8b53da))
+    (pin "2" (uuid da0d5056-4934-4a40-b5c2-5d5306a4b6c3))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "C30") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "C6") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "C28") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "C16") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "C29") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "C24") (unit 1)
         )
       )
     )
@@ -1439,18 +1487,18 @@
     (property "Voltage" "100V" (at 190.2841 81.1578 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (pin "1" (uuid 506411f9-4812-46f3-a5a9-888ba0b40065))
-    (pin "2" (uuid c78d2694-43b7-45dc-98e9-8805be43ad1c))
+    (pin "1" (uuid b2a4de9e-9872-43bf-adf2-22b16ca79854))
+    (pin "2" (uuid 1f8d7680-b6fd-4d21-863f-d2eb713e5c24))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "C27") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "C5") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "C25") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "C15") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "C26") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "C23") (unit 1)
         )
       )
     )
@@ -1459,7 +1507,7 @@
   (symbol (lib_id "Device:R_Small") (at 144.78 88.9 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a842e4fe-1acc-4e0a-93ba-2d6c7f0ead2b)
-    (property "Reference" "R1" (at 144.78 84.0191 90)
+    (property "Reference" "R22" (at 144.78 84.0191 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "22R" (at 144.78 86.4433 90)
@@ -1471,18 +1519,18 @@
     (property "Datasheet" "~" (at 144.78 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 8f23c484-565d-42ab-9b65-8004360498f6))
-    (pin "2" (uuid f43f8a43-164d-4c30-b3f1-c96355d9c28f))
+    (pin "1" (uuid cf11772d-bace-47eb-88b9-45a83437df50))
+    (pin "2" (uuid 258c8ab6-ae32-4fb4-b25f-ebce5dae9e7c))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "R1") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "R2") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "R9") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "R11") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "R19") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "R22") (unit 1)
         )
       )
     )
@@ -1491,7 +1539,7 @@
   (symbol (lib_id "Device:C_Small") (at 177.8 78.74 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b8843d0c-2e38-4702-823b-015c7ba387bb)
-    (property "Reference" "C24" (at 180.1241 76.3094 0)
+    (property "Reference" "C26" (at 180.1241 76.3094 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "4u7" (at 180.1241 78.7336 0)
@@ -1506,18 +1554,18 @@
     (property "Voltage" "100V" (at 180.1241 81.1578 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (pin "1" (uuid 4f5ad1ad-5b2d-4727-83c1-c5c7fbf65dcb))
-    (pin "2" (uuid ea6afd48-ddcf-414a-9570-8801412ea49c))
+    (pin "1" (uuid 136db03d-d14c-4d28-88e9-f15f4f686bf6))
+    (pin "2" (uuid 13c961e5-82eb-4ab2-8be6-a3d273cbef63))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "C24") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "C1") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "C14") (unit 1)
+        )
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
           (reference "C22") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "C23") (unit 1)
         )
       )
     )
@@ -1526,7 +1574,7 @@
   (symbol (lib_id "Device:C_Small") (at 124.46 83.82 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d7dd47e1-f097-460e-8686-c0914fe65f53)
-    (property "Reference" "C5" (at 124.4536 78.1136 90)
+    (property "Reference" "C24" (at 124.4536 78.1136 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1n" (at 124.4536 80.5378 90)
@@ -1538,51 +1586,18 @@
     (property "Datasheet" "~" (at 124.46 83.82 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 01b055ed-7927-41bc-ad82-c15ae69578b8))
-    (pin "2" (uuid 7f4a96d2-1dc3-4f60-9ac4-b96f06089b02))
+    (pin "1" (uuid 034b81d5-fb1e-46e3-94cb-d1b495d07ec5))
+    (pin "2" (uuid 6779f0fe-5035-4493-8dcf-a0f065a4ae24))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "C5") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "C9") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "C6") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "C18") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "C11") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:Q_NMOS_GDS") (at 165.1 93.98 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid d9cb43e5-a381-42a3-ab00-a4409a7a1e19)
-    (property "Reference" "Q1" (at 165.1 99.06 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Value" "TPHR8504PL" (at 165.1 101.4842 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "" (at 170.18 91.44 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 165.1 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 463acd46-95f1-4be9-bf42-4ff03adcb9b3))
-    (pin "2" (uuid faea7213-2915-430a-bc31-f00753c6e9bb))
-    (pin "3" (uuid 39a0d24d-5f48-47f7-959d-4de88772bbf0))
-    (instances
-      (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "Q1") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "Q3") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "Q5") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "C26") (unit 1)
         )
       )
     )
@@ -1591,35 +1606,35 @@
   (symbol (lib_id "Ariamelon-IC:UCC27282") (at 106.68 101.6 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid de4d6969-bff4-46f4-ad49-0c76b22e94ac)
-    (property "Reference" "U1" (at 108.8741 113.4801 0)
+    (property "Reference" "U5" (at 108.8741 113.4801 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "UCC27282" (at 108.8741 115.9043 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 106.68 101.6 0)
+    (property "Footprint" "Ariamelon-Package:SOIC-8_3.9x4.9mm_P1.27mm" (at 106.68 101.6 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "https://www.ti.com/lit/ds/symlink/ucc27282.pdf" (at 106.68 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 382618b6-63a8-47cb-9692-e692213eec9c))
-    (pin "2" (uuid 52a6829c-2910-4893-986e-23847526a9a5))
-    (pin "3" (uuid ac0e0f1c-89f5-49e0-aa09-72519f3498ec))
-    (pin "4" (uuid 93d1b9fe-e6d6-43f5-a465-d8c0598bc6eb))
-    (pin "5" (uuid ee09f436-d527-4d55-8207-00a52ff33d1f))
-    (pin "6" (uuid d9463d71-7e44-42e2-a271-33a955fcbc3f))
-    (pin "7" (uuid 21eba362-b3b4-4f3c-b7ff-dabace8dcd0b))
-    (pin "8" (uuid 0019e11b-6bf9-47fc-9588-0821ed222872))
+    (pin "1" (uuid d5613473-7d44-41c4-b9e1-20f92cc1c589))
+    (pin "2" (uuid 1eab4699-0920-4b23-a114-5fce5885c87e))
+    (pin "3" (uuid eacb7ec2-59aa-4bce-b7fb-50adc27dd0f8))
+    (pin "4" (uuid f0402304-5b8e-473b-9752-5dbf3c72a354))
+    (pin "5" (uuid 90b7048b-fe69-4f94-960c-c97ba21a65d0))
+    (pin "6" (uuid 2d93a52c-d65f-42d6-84ba-9c7d8bd13802))
+    (pin "7" (uuid 0eebbceb-5922-4e7a-8f56-97960919f377))
+    (pin "8" (uuid deeb7859-37e3-4009-81b2-e77985efacf1))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
           (reference "U1") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
           (reference "U3") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
           (reference "U5") (unit 1)
         )
       )
@@ -1629,7 +1644,7 @@
   (symbol (lib_id "Device:R_Small") (at 149.86 119.38 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dfc8fe88-d4f3-48c7-be8e-ed308a8d0be9)
-    (property "Reference" "R4" (at 149.86 124.2609 90)
+    (property "Reference" "R26" (at 149.86 124.2609 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10" (at 149.86 121.8367 90)
@@ -1641,18 +1656,18 @@
     (property "Datasheet" "~" (at 149.86 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 9004bf4a-e917-4fdb-a9a8-9ecbcccb7e8f))
-    (pin "2" (uuid 4d9c0cf2-1544-4988-8660-fca1e593cb5c))
+    (pin "1" (uuid 31788aca-0c75-4d6f-9530-96c815b60890))
+    (pin "2" (uuid d27cde31-4e5f-4c29-8010-55f45734fd8b))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "R4") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "R9") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "R12") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "R20") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "R22") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "R26") (unit 1)
         )
       )
     )
@@ -1661,7 +1676,7 @@
   (symbol (lib_id "Device:D_Small") (at 139.7 93.98 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ebf27768-3615-44c7-b6ff-03b73be2a1d4)
-    (property "Reference" "D1" (at 139.7 99.1403 0)
+    (property "Reference" "D5" (at 139.7 99.1403 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "4148" (at 139.7 96.7161 0)
@@ -1679,17 +1694,17 @@
     (property "Sim.Pins" "1=K 2=A" (at 139.7 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 0899c93f-6783-424b-a578-c0e8d0a92475))
-    (pin "2" (uuid cf886433-5a7e-4d28-8d77-a2257dd21817))
+    (pin "1" (uuid a272e7aa-a0cf-462d-8ccd-f87287814b4e))
+    (pin "2" (uuid 53da8e3e-c0c8-4906-a6b1-34dce8060d9d))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
           (reference "D1") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
           (reference "D3") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
           (reference "D5") (unit 1)
         )
       )
@@ -1699,7 +1714,7 @@
   (symbol (lib_id "Device:D_Small") (at 139.7 119.38 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fd2bb0f0-547c-4a4c-bab9-36720243c4ba)
-    (property "Reference" "D2" (at 139.7 124.5403 0)
+    (property "Reference" "D6" (at 139.7 124.5403 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "4148" (at 139.7 122.1161 0)
@@ -1717,17 +1732,17 @@
     (property "Sim.Pins" "1=K 2=A" (at 139.7 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid c7a34625-2e86-4878-b8fc-b4eb10f824b1))
-    (pin "2" (uuid 46442df3-3594-47b2-98fa-f652201a333d))
+    (pin "1" (uuid 142070d6-53df-4465-a087-4df0a3f6fe34))
+    (pin "2" (uuid 430a8e73-0974-4102-9772-19e61912b179))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
           (reference "D2") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
           (reference "D4") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
           (reference "D6") (unit 1)
         )
       )
@@ -1752,14 +1767,14 @@
     (pin "1" (uuid 6b8498c9-1e4d-4822-9650-aabc52f12547))
     (instances
       (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/66b89077-47c3-4560-995d-b73f8131e889"
-          (reference "#PWR016") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/994a3057-5744-4338-a5b2-a2a44cbf0272"
+          (reference "#PWR014") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/03610141-8a53-451a-9aef-b28319aeb056"
-          (reference "#PWR08") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/30fc0719-49f5-4e0a-8ed2-9a63cefec1e8"
+          (reference "#PWR024") (unit 1)
         )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/40e3f309-d611-4837-a833-299126044f7d"
-          (reference "#PWR010") (unit 1)
+        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/90442696-4f37-4db7-81bc-469b762a7682"
+          (reference "#PWR031") (unit 1)
         )
       )
     )
