@@ -1,4 +1,4 @@
-39031646403226
+42427047369870
 Ariamelon-Package
 DFN-12-1EP_3x3mm_P0.45mm_EP1.66x2.38mm
 DD Package; 12-Lead Plastic DFN (3mm x 3mm) (see Linear Technology DFN_12_05-08-1725.pdf)
@@ -74,8 +74,8 @@ SOP-8-Advance_5.0x6.0mm_P1.27mm
 
 
 0
-9
-9
+5
+5
 Ariamelon-Package
 SOT-23-3
 SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py
@@ -125,6 +125,20 @@ TO-220-3 Vertical RM 2.54mm
 0
 3
 3
+Ariamelon-Package
+Texas_S-PVSON-N8-1EP_4x4mm_P0.8_EP2.5x3.4mm
+DRM
+Integrated Circuit
+0
+9
+9
+Ariamelon-Package
+Texas_S-PVSON-N10
+3x3mm Body, 0.5mm Pitch, S-PVSON-N10, DRC, http://www.ti.com/lit/ds/symlink/tps61201.pdf
+0.5 S-PVSON-N10 DRC
+0
+15
+11
 Ariamelon-Package
 Texas_X2QFN-12_1.6x1.6mm_P0.4mm
 Texas  X2QFN, 12 Pin (http://www.ti.com/lit/ml/mpqf391c/mpqf391c.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
