@@ -21,7 +21,7 @@
       "keepouts": true,
       "lockedItems": false,
       "otherItems": true,
-      "pads": false,
+      "pads": true,
       "text": true,
       "tracks": true,
       "vias": true,
@@ -72,6 +72,31 @@
     "version": 3
   },
   "project": {
-    "files": []
+    "files": [
+      {
+        "name": "BLDC-Controller.kicad_sch",
+        "open": true,
+        "window": {
+          "display": 1,
+          "maximized": true,
+          "pos_x": -8,
+          "pos_y": -8,
+          "size_x": 2576,
+          "size_y": 1416
+        }
+      },
+      {
+        "name": "BLDC-Controller.kicad_pcb",
+        "open": true,
+        "window": {
+          "display": 1,
+          "maximized": true,
+          "pos_x": -8,
+          "pos_y": -8,
+          "size_x": 2576,
+          "size_y": 1416
+        }
+      }
+    ]
   }
 }
