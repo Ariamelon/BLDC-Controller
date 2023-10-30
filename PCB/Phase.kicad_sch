@@ -881,10 +881,6 @@
     (stroke (width 0) (type default))
     (uuid b23bda50-ce9e-455d-a0f4-b0a55dcfec8a)
   )
-  (wire (pts (xy 218.44 101.6) (xy 218.44 104.14))
-    (stroke (width 0) (type default))
-    (uuid b2b716ce-5dc7-4e99-9d34-b2ce659c3379)
-  )
   (wire (pts (xy 152.4 114.3) (xy 154.94 114.3))
     (stroke (width 0) (type default))
     (uuid b99fb86e-855e-42ff-a52b-a9df857f31e8)
@@ -928,10 +924,6 @@
   (wire (pts (xy 154.94 109.22) (xy 154.94 114.3))
     (stroke (width 0) (type default))
     (uuid ea66af4c-d00d-4a4e-b7b5-cb2d71f91839)
-  )
-  (wire (pts (xy 218.44 93.98) (xy 218.44 96.52))
-    (stroke (width 0) (type default))
-    (uuid ebb143ed-200f-421d-8527-be3dca0a071c)
   )
   (wire (pts (xy 180.34 78.74) (xy 190.5 78.74))
     (stroke (width 0) (type default))
@@ -1166,10 +1158,10 @@
           (reference "C1") (unit 1)
         )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/359c123b-7597-4c48-9e5e-81f4f16bbab1"
-          (reference "C4") (unit 1)
+          (reference "C3") (unit 1)
         )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/38eef514-6b7d-4a31-999e-913e758ed75e"
-          (reference "C7") (unit 1)
+          (reference "C5") (unit 1)
         )
       )
     )
@@ -1263,37 +1255,6 @@
         )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/38eef514-6b7d-4a31-999e-913e758ed75e"
           (reference "#PWR031") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 218.44 104.14 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 6b842c2b-9514-4cd7-b3f4-c17ce1a45622)
-    (property "Reference" "#PWR026" (at 218.44 110.49 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 218.44 108.2731 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Footprint" "" (at 218.44 104.14 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 218.44 104.14 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4bc773e7-bbf9-4b5a-b826-3aa44071044e))
-    (instances
-      (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/0df8a6da-2045-4c85-bcae-023f67988b04"
-          (reference "#PWR026") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/359c123b-7597-4c48-9e5e-81f4f16bbab1"
-          (reference "#PWR033") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/38eef514-6b7d-4a31-999e-913e758ed75e"
-          (reference "#PWR034") (unit 1)
         )
       )
     )
@@ -1426,41 +1387,10 @@
           (reference "C2") (unit 1)
         )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/359c123b-7597-4c48-9e5e-81f4f16bbab1"
-          (reference "C5") (unit 1)
+          (reference "C4") (unit 1)
         )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/38eef514-6b7d-4a31-999e-913e758ed75e"
-          (reference "C8") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:VCC") (at 218.44 93.98 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 8237d812-9fe4-47ac-a707-53c4bbc7f220)
-    (property "Reference" "#PWR014" (at 218.44 97.79 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "VCC" (at 218.44 89.8469 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 218.44 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 218.44 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 277ffa23-ed5f-48e8-a8be-c4f02734741c))
-    (instances
-      (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/0df8a6da-2045-4c85-bcae-023f67988b04"
-          (reference "#PWR014") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/359c123b-7597-4c48-9e5e-81f4f16bbab1"
-          (reference "#PWR015") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/38eef514-6b7d-4a31-999e-913e758ed75e"
-          (reference "#PWR025") (unit 1)
+          (reference "C6") (unit 1)
         )
       )
     )
@@ -1863,41 +1793,6 @@
         )
         (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/38eef514-6b7d-4a31-999e-913e758ed75e"
           (reference "R17") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:C_Polarized_Small") (at 218.44 99.06 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid f6eefdb7-d1aa-4ca7-b65a-9ec8ed621860)
-    (property "Reference" "C13" (at 220.599 97.3018 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "1000u" (at 220.599 99.726 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Ariamelon-Device:CP_Radial_D16.0mm_P7.62mm" (at 218.44 99.06 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 218.44 99.06 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid de76a3dd-774d-43ed-af39-99d57626966b))
-    (pin "2" (uuid f251ad8e-e329-4402-b644-4c5e0f3e3a8d))
-    (instances
-      (project "BLDC-Controller"
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/5281a03e-d6ab-4142-84eb-776fec16e050"
-          (reference "C13") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/0df8a6da-2045-4c85-bcae-023f67988b04"
-          (reference "C3") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/359c123b-7597-4c48-9e5e-81f4f16bbab1"
-          (reference "C6") (unit 1)
-        )
-        (path "/3f98b8cc-f1be-42b2-9c23-c425b8147bc0/38eef514-6b7d-4a31-999e-913e758ed75e"
-          (reference "C9") (unit 1)
         )
       )
     )
