@@ -29,8 +29,8 @@ void setup() {
 
   ACSR   = 0b00010000;          // Disable and clear ACI flag (analog comparator interrupt).
 
-  PWM_DUTY_SET(PWM_START_DUTY); // Setup starting PWM with duty cycle = PWM_START_DUTY.
   motor_speed = PWM_START_DUTY;
+  PWM_DUTY_SET(motor_speed); // Setup starting PWM with duty cycle = PWM_START_DUTY.
 
   // Initial open loop commutation with delay from 10000us down to 100us to enable motor to start properly.
   i = 10000;
@@ -46,7 +46,6 @@ void setup() {
 
 void loop() {
   // Speed control via on-board buttons.
-
   while(!(digitalRead(SPEED_UP)) && motor_speed < PWM_MAX_DUTY){
     motor_speed++;
     PWM_DUTY_SET(motor_speed);
