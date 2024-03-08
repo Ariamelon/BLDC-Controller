@@ -5,6 +5,13 @@
   )
 
   (paper "A5")
+  (title_block
+    (title "XE636 BLDC Motor Controller")
+    (date "2024-03-09")
+    (rev "V1.0")
+    (company "Aria Tso")
+  )
+
   (layers
     (0 "F.Cu" signal)
     (31 "B.Cu" signal)

@@ -4,6 +4,13 @@
 
   (paper "A4")
 
+  (title_block
+    (title "XE636 BLDC Motor Controller")
+    (date "2024-03-09")
+    (rev "V1.0")
+    (company "Aria Tso")
+  )
+
   (lib_symbols
   )
 
@@ -1068,10 +1075,6 @@
     )
   )
 
-  (text "- Voltage/current sensing for each phase" (at 20.32 101.6 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 1be969e0-15f5-4344-8c80-f9c7865f4f59)
-  )
   (text "- Voltage input range = 10.5V to 25.2V" (at 20.32 96.52 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 6d42b81e-d368-4571-9271-fdc325be392a)
@@ -1093,10 +1096,6 @@
     (at 190.5 162.56 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid b788d75b-830a-430e-b134-6e7e27a0e6ab)
-  )
-  (text "- Rated current = 50A" (at 20.32 99.06 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid c4ee8ec7-4c8d-434b-95fe-5acdbe81013e)
   )
 
   (sheet (at 55.88 22.86) (size 25.4 12.7) (fields_autoplaced)
