@@ -654,9 +654,17 @@
     (uuid faf55a5d-8e94-468a-b80f-1e8156837394)
   )
 
+  (text "Resistors must be 1% or better" (at 190.5 93.98 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 0222dd31-98c8-41fd-94f4-584ee5c0d863)
+  )
   (text "No need for any special circuitry to prevent this" (at 93.98 96.52 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 0d3bdff0-2100-48cb-a83e-b039bd0f5c92)
+  )
+  (text "Max voltage (25.2V input) = 4.76V" (at 190.5 91.44 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 3f8a15df-5a12-48a4-82e6-2bc2cba24111)
   )
   (text "Must size boot capacitor to account for skipped pulses and switching times!"
     (at 93.98 58.42 0)
