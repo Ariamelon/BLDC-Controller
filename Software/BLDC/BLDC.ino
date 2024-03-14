@@ -4,7 +4,6 @@
 #define DEBOUNCE_PERIOD   5
 #define BTN_SPEED_UP      PD3
 #define BTN_SPEED_DOWN    PD2
-#define SERIAL_DEBUG      FALSE
 
 void pwm_duty_set(uint8_t duty);
 void bldc_comm();
@@ -14,13 +13,6 @@ uint16_t i;
 bool motor_direction = 1;
 
 void setup() {
-  // If serial debug is enabled, start serial comms and initialize timer 0.
-  #if SERIAL_DEBUG
-  Serial.begin(9600);
-  TCCR0A = 0;
-  TCCR0B = 0b00000010; // Set clock source to clkIO / 2 (62.5 * 2).
-  #endif
-
   // Enable input with pullups for the speed control buttons.
   pinMode(BTN_SPEED_UP, INPUT_PULLUP);
   pinMode(BTN_SPEED_DOWN, INPUT_PULLUP);
@@ -83,15 +75,6 @@ void pwm_duty_set(uint8_t duty){
 }
 
 void bldc_comm(){ // BLDC motor commutation function.
-  // If serial debug is enabled, show current commutation state and print time spend on last state.
-  #if SERIAL_DEBUG
-  Serial.print("Current commutation state: ");
-  Serial.print(bldc_state);
-  Serial.print(". Time taken for last state: ");
-  Serial.println(TCNT0);
-  TCNT0 = 0;
-  #endif
-
   switch(bldc_state){
     case 0:
       PORTC &= 0b11111010; // Disable LI_A (PC2) and LI_C (PC0).
@@ -169,10 +152,6 @@ ISR (ANALOG_COMP_vect) {
       if((ACSR & 0b00100000)) i -= 1;  // If 1 detected on ACO (comparator output), delay debouncing.
     }
   }
-  
-  #if SERIAL_DEBUG
-  Serial.print("Interrupt detected. ");
-  #endif
 
   bldc_comm();
 }
