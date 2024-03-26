@@ -1,6 +1,6 @@
-#define PWM_MAX_DUTY      255
+#define PWM_MAX_DUTY      248
 #define PWM_MIN_DUTY      32
-#define PWM_START_DUTY    50
+#define PWM_START_DUTY    64
 #define DEBOUNCE_PERIOD   10
 
 void pwm_duty_set(uint8_t duty);
@@ -68,10 +68,10 @@ void bldc_comm_startup(void){
 
   // Initial open loop commutation to enable motor to start properly.
   uint16_t i = 5000;
-  while(i > 20) {
+  while(i > 100) {
     bldc_comm_state();
     delayMicroseconds(i);
-    i -= 20;
+    i -= 100;
   }
 
   ADCSRB = 0b01000000; // Enable analog comparator mux.
