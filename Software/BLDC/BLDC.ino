@@ -1,4 +1,4 @@
-#define PWM_MAX_DUTY      248
+#define PWM_MAX_DUTY      255
 #define PWM_MIN_DUTY      32
 #define PWM_START_DUTY    64
 #define DEBOUNCE_PERIOD   10
@@ -11,6 +11,9 @@ void bldc_comm_shutdown(void);
 uint8_t bldc_state = 0, motor_speed;
 
 void setup() {
+  Serial.begin(9600);
+  Serial.println("Initializing BLDC motor controller.");
+
   DDRB  |= 0b00001110; // Configure HI_A (PB3), HI_B (PB2) and HI_C (PB1) (high side) as outputs.
   PORTB &= 0b11110001; // Disable HI_A (PB3), HI_B (PB2) and HI_C (PB1).
   PORTB |= 0b00110000; // Enable speed+ (PB5) and speed- (PB4) pullups.
@@ -27,7 +30,8 @@ void setup() {
 
   ACSR   = 0b00010000; // Disable and clear ACI flag (analog comparator interrupt).
   ADCSRA = 0;          // Disable ADC.
-  
+
+  Serial.println("Initialization complete.");  
   bldc_comm_shutdown();
 }
 
@@ -39,16 +43,23 @@ void loop() {
       pwm_duty_set(motor_speed);
     }
     else if (motor_speed < PWM_MIN_DUTY){
+      Serial.println("Starting up motor.");
       bldc_comm_startup();
+      Serial.println("Start-up complete.");
     }
+    Serial.print("Motor speed: ");
+    Serial.println(motor_speed);
     delay(10);
   }
   while(!(PINB & (1 << PINB4))){
     if (motor_speed > PWM_MIN_DUTY){
       motor_speed--;
       pwm_duty_set(motor_speed);
+      Serial.print("Motor speed: ");
+      Serial.println(motor_speed);
     }
     else if ((motor_speed <= PWM_MIN_DUTY) && (motor_speed > 0)){
+      Serial.println("Shutting down motor.");
       bldc_comm_shutdown();
     }
     delay(10);
