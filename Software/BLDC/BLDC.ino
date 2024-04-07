@@ -48,21 +48,23 @@ void loop() {
       Serial.println("Start-up complete.");
     }
     Serial.print("Motor speed: ");
-    Serial.println(motor_speed);
-    delay(10);
+    Serial.print(motor_speed);
+    Serial.println("/255");
+    delay(100);
   }
   while(!(PINB & (1 << PINB4))){
     if (motor_speed > PWM_MIN_DUTY){
       motor_speed--;
       pwm_duty_set(motor_speed);
       Serial.print("Motor speed: ");
-      Serial.println(motor_speed);
+      Serial.print(motor_speed);
+      Serial.println("/255");
     }
     else if ((motor_speed <= PWM_MIN_DUTY) && (motor_speed > 0)){
       Serial.println("Shutting down motor.");
       bldc_comm_shutdown();
     }
-    delay(10);
+    delay(100);
   }
 }
 
