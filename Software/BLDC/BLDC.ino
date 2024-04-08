@@ -1,7 +1,7 @@
 #define PWM_MAX_DUTY      255
 #define PWM_MIN_DUTY      32
 #define PWM_START_DUTY    64
-#define DEBOUNCE_PERIOD   10
+#define FILTER_PERIOD     5
 
 void pwm_duty_set(uint8_t duty);
 void bldc_comm_state(void);
@@ -37,7 +37,7 @@ void setup() {
 
 void loop() {
   // Speed control via on-board buttons.
-  while(!(PINB & (1 << PINB5))){
+  while(!(PINB & (1 << PINB5))){      // Speed up pressed
     if ((motor_speed < PWM_MAX_DUTY) && (motor_speed >= PWM_MIN_DUTY)){
       motor_speed++;
       pwm_duty_set(motor_speed);
@@ -50,9 +50,9 @@ void loop() {
     Serial.print("Motor speed: ");
     Serial.print(motor_speed);
     Serial.println("/255");
-    delay(100);
+    delay(10);
   }
-  while(!(PINB & (1 << PINB4))){
+  while(!(PINB & (1 << PINB4))){      // Speed down pressed
     if (motor_speed > PWM_MIN_DUTY){
       motor_speed--;
       pwm_duty_set(motor_speed);
@@ -64,7 +64,7 @@ void loop() {
       Serial.println("Shutting down motor.");
       bldc_comm_shutdown();
     }
-    delay(100);
+    delay(10);
   }
 }
 
@@ -121,7 +121,7 @@ void bldc_comm_state(void){ // BLDC motor commutation function.
       TCCR1A = 0;          // Disable HI_C (0C1A) and HI_B (OC1B).
       TCCR2A = 0b10000001; // Enable HI_A (OC2A) in PWM, phase correct, 8-bit mode.
 
-      ADMUX  = 0b00000101; // Select ADC5 (PC5) as comparator negative input.
+      ADMUX  = 0b00000011; // Select V_Sen_C (ADC3) as comparator negative input.
       ACSR  |= 0b00000011; // Set interrupt on rising edge and enable comparator interrupt.
       break;
     case 1:
@@ -131,7 +131,7 @@ void bldc_comm_state(void){ // BLDC motor commutation function.
       TCCR1A = 0;          // Disable HI_C (0C1A) and HI_B (OC1B).
       TCCR2A = 0b10000001; // Enable HI_A (OC2A) in PWM, phase correct, 8-bit mode.
 
-      ADMUX  = 0b00000100; // Select ADC4 (PC4) as comparator negative input.
+      ADMUX  = 0b00000100; // Select V_Sen_B (ADC4) as comparator negative input.
       ACSR  &= 0b11111110; // Set interrupt on falling edge.
       break;
     case 2:
@@ -141,7 +141,7 @@ void bldc_comm_state(void){ // BLDC motor commutation function.
       TCCR1A = 0b00100001; // Enable HI_B (OC1B) in PWM, phase correct, 8-bit mode and disable HI_C (0C1A).
       TCCR2A = 0;          // Disable HI_A (OC2A).
 
-      ADMUX  = 0b00000101; // Select ADC5 (PC5) as comparator negative input.
+      ADMUX  = 0b00000101; // Select V_Sen_A (PC5) as comparator negative input.
       ACSR  |= 0b00000011; // Set interrupt on rising edge.
       break;
     case 3:
@@ -151,7 +151,7 @@ void bldc_comm_state(void){ // BLDC motor commutation function.
       TCCR1A = 0b00100001; // Enable HI_B (OC1B) in PWM, phase correct, 8-bit mode and disable HI_C (0C1A).
       TCCR2A = 0;          // Disable HI_A (OC2A).
 
-      ADMUX  = 0b00000011; // Select ADC3 (PC3) as comparator negative input.
+      ADMUX  = 0b00000011; // Select V_Sen_C (ADC3) as comparator negative input.
       ACSR  &= 0b11111110; // Set interrupt on falling edge.
       break;
     case 4:
@@ -161,7 +161,7 @@ void bldc_comm_state(void){ // BLDC motor commutation function.
       TCCR1A = 0b10000001; // Enable HI_C (0C1A) in PWM, phase correct, 8-bit mode and disable HI_B (OC1B).
       TCCR2A = 0;          // Disable HI_A (OC2A).
 
-      ADMUX  = 0b00000100; // Select ADC4 (PC4) as comparator negative input.
+      ADMUX  = 0b00000100; // Select V_Sen_B (ADC4) as comparator negative input.
       ACSR  |= 0b00000011; // Set interrupt on rising edge.
       break;
     case 5:
@@ -171,7 +171,7 @@ void bldc_comm_state(void){ // BLDC motor commutation function.
       TCCR1A = 0b10000001; // Enable HI_C (0C1A) in PWM, phase correct, 8-bit mode and disable HI_B (OC1B).
       TCCR2A = 0;          // Disable HI_A (OC2A).
       
-      ADMUX  = 0b00000101; // Select ADC5 (PC5) as comparator negative input.
+      ADMUX  = 0b00000101; // Select V_Sen_A (PC5) as comparator negative input.
       ACSR  &= 0b11111110; // Set interrupt on falling edge.
       break;
   }
@@ -182,8 +182,8 @@ void bldc_comm_state(void){ // BLDC motor commutation function.
 // Analog comparator ISR
 ISR (ANALOG_COMP_vect) {
   uint8_t i;
-  // BEMF debounce, reads values DEBOUNCE_PERIOD times before processing result.
-  for(i = 0; i < DEBOUNCE_PERIOD; i++) {
+  // BEMF filter, reads values FILTER_PERIOD times before processing result.
+  for(i = 0; i < FILTER_PERIOD; i++) {
     if(bldc_state & 1){         // If BLDC state is odd (001, 011 or 101).
       if(!(ACSR & 0b00100000)){ // If 0 detected on ACO (comparator output), delay debouncing.
         i -= 1;
