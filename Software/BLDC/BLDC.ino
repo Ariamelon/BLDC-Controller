@@ -1,72 +1,109 @@
-#define PWM_MAX_DUTY      255
-#define PWM_MIN_DUTY      48
-#define PWM_START_DUTY    64
-#define FILTER_PERIOD     3
+#define FOSC            16000000
+#define BAUD_RATE       9600
+#define UBBR            FOSC/16/BAUD - 1
+#define PWM_MAX_DUTY    255
+#define PWM_MIN_DUTY    48
+#define PWM_START_DUTY  64
+#define FILTER_PERIOD   3
+
 
 void pwm_duty_set(uint8_t duty);
 void motor_phase_state(void);
 void motor_start(void);
 void motor_stop(void);
 
-uint8_t motor_step = 0, motor_speed;
+volatile uint8_t commutation_step = 0;
+uint8_t motor_speed;
 
-void setup() {
+// Analog comparator ISR
+ISR (ANALOG_COMP_vect) {
+  uint8_t i;
+  // BEMF filter, reads values FILTER_PERIOD times before processing result.
+  for(i = 0; i < FILTER_PERIOD; i++) {
+    if(commutation_step & 1){         // If BLDC step is odd (001, 011 or 101).
+      if(!(ACSR & 0b00100000)){ // If 0 detected on ACO (comparator output), delay debouncing.
+        i -= 1;
+      }
+    }
+    else{                       // If BLDC step is even (000, 010 or 100).
+      if((ACSR & 0b00100000)){  // If 1 detected on ACO (comparator output), delay debouncing.
+        i -= 1;
+      }
+    }
+  }
+
+  motor_phase_state();
+}
+
+int main(void){
+  init();
+  
+  // Set baud rate.
+  UBRR0H  = (uint8_t)(UBBR >> 8);
+  UBRR0L  = (uint8_t)UBBR;
+  UCSR0B |= 0b00011000; // Enable TX and RX.
+  UCSR0C |= 0b00000011; // Set for 8-bit asynchronous operation with no parity and one stop bit.
+
   Serial.begin(9600);
   Serial.println("Initializing BLDC motor controller.");
 
-  DDRB  |= 0b00001110; // Configure HI_A (PB3), HI_B (PB2) and HI_C (PB1) (high side) as outputs.
-  PORTB &= 0b11110001; // Disable HI_A (PB3), HI_B (PB2) and HI_C (PB1).
-  PORTB |= 0b00110000; // Enable speed+ (PB5) and speed- (PB4) pullups.
-  DDRC  |= 0b00000111; // Configure LI_A (PC2), LI_B (PC1) and LI_C (PC0) (low side) as outputs.
-  PORTC &= 0b11111000; // Disable LI_A (PC2), LI_B (PC1) and LI_C (PC0).
-  DDRD  |= 0b00011100; // Configure red LED (PD2), yellow LED (PD3) and green LED (PD4) as outputs.
-  PORTD &= 0b11100111; // Disable yellow LED (PD3) and green LED (PD4).
-  PORTD |= 0b00000100; // Enable red LED (PD2).
+  DDRB   |= 0b00001110; // Configure HI_A (PB3), HI_B (PB2) and HI_C (PB1) (high side) as outputs.
+  PORTB  &= 0b11110001; // Disable HI_A (PB3), HI_B (PB2) and HI_C (PB1).
+  PORTB  |= 0b00110000; // Enable speed+ (PB5) and speed- (PB4) pullups.
 
-  TCCR1A = 0;          // Initialize timers 1 and 2.
-  TCCR1B = 0b00000001; // Clock source set to clkIO / 1 (no prescaling).
-  TCCR2A = 0;          // Allows for highest PWM frequency.
-  TCCR2B = 0b00000001; // Also disable PWM outputs.
+  DDRC   |= 0b00000111; // Configure LI_A (PC2), LI_B (PC1) and LI_C (PC0) (low side) as outputs.
+  PORTC  &= 0b11111000; // Disable LI_A (PC2), LI_B (PC1) and LI_C (PC0).
+  
+  DDRD   |= 0b00011100; // Configure red LED (PD2), yellow LED (PD3) and green LED (PD4) as outputs.
+  PORTD  &= 0b11100111; // Disable yellow LED (PD3) and green LED (PD4).
+  PORTD  |= 0b00000100; // Enable red LED (PD2).
 
-  ACSR   = 0b00010000; // Disable and clear ACI flag (analog comparator interrupt).
-  ADCSRA = 0;          // Disable ADC.
+  TCCR1A  = 0;          // Initialize timers 1 and 2.
+  TCCR1B  = 0b00000001; // Clock source set to clkIO / 1 (no prescaling).
+  TCCR2A  = 0;          // Allows for highest PWM frequency.
+  TCCR2B  = 0b00000001; // Also disable PWM outputs.
+
+  ACSR    = 0b00010000; // Disable and clear ACI flag (analog comparator interrupt).
+  ADCSRA  = 0;          // Disable ADC.
 
   Serial.println("Initialization complete.");
-}
 
-void loop() {
   // Speed control via on-board buttons. Gets overridden by analog comparator ISR.
   // Some Arduino functions used here as speed is not critical.
-  
-  while(!(PINB & (1 << PINB5))){                                        // Speed up button pressed.
-    if ((motor_speed < PWM_MAX_DUTY) && (motor_speed >= PWM_MIN_DUTY)){ // If speed is below max and motor is already moving.
-      motor_speed++;
-      pwm_duty_set(motor_speed);
-    }
-    else if (motor_speed < PWM_MIN_DUTY){                               // If motor is stopped.
-      Serial.println("Starting up motor.");                             // Start up motor.
-      motor_start();
-      Serial.println("Start-up complete.");
-    }
-    Serial.print("Motor speed: ");
-    Serial.print(motor_speed);
-    Serial.println("/255");
-    delay(10);
-  }
-  while(!(PINB & (1 << PINB4))){                                        // Speed down button pressed
-    if (motor_speed > PWM_MIN_DUTY){                                    // If speed is above min.
-      motor_speed--;
-      pwm_duty_set(motor_speed);
+
+  while(1){
+    while(!(PINB & (1 << PINB5))){                                        // Speed up button pressed.
+      if ((motor_speed < PWM_MAX_DUTY) && (motor_speed >= PWM_MIN_DUTY)){ // If speed is below max and motor is already moving.
+        motor_speed++;
+        pwm_duty_set(motor_speed);
+      }
+      else if (motor_speed < PWM_MIN_DUTY){                               // If motor is stopped.
+        Serial.println("Starting up motor.");                             // Start up motor.
+        motor_start();
+        Serial.println("Start-up complete.");
+      }
       Serial.print("Motor speed: ");
       Serial.print(motor_speed);
       Serial.println("/255");
+      delay(10);
     }
-    else if ((motor_speed <= PWM_MIN_DUTY) && (motor_speed > 0)){       // If speed is at or below min.
-      Serial.println("Shutting down motor.");
-      motor_stop();
+    while(!(PINB & (1 << PINB4))){                                        // Speed down button pressed
+      if (motor_speed > PWM_MIN_DUTY){                                    // If speed is above min.
+        motor_speed--;
+        pwm_duty_set(motor_speed);
+        Serial.print("Motor speed: ");
+        Serial.print(motor_speed);
+        Serial.println("/255");
+      }
+      else if ((motor_speed <= PWM_MIN_DUTY) && (motor_speed > 0)){       // If speed is at or below min.
+        Serial.println("Shutting down motor.");
+        motor_stop();
+      }
+      delay(10);
     }
-    delay(10);
   }
+
+  return 1;
 }
 
 void pwm_duty_set(uint8_t duty){
@@ -109,7 +146,7 @@ void motor_stop(void){
 }
 
 void motor_phase_state(void){ // BLDC motor commutation function.
-  switch(motor_step){
+  switch(commutation_step){
     case 0:
       PORTC &= 0b11111010;    // Disable LI_A (PC2) and LI_C (PC0).
       PORTC |= 0b00000010;    // Enable LI_B (PC1).
@@ -171,26 +208,6 @@ void motor_phase_state(void){ // BLDC motor commutation function.
       ACSR  &= 0b11111110;    // Set interrupt on falling edge.
       break;
   }
-  motor_step ++;              // Advance commutation step by one.
-  motor_step %= 6;
-}
-
-// Analog comparator ISR
-ISR (ANALOG_COMP_vect) {
-  uint8_t i;
-  // BEMF filter, reads values FILTER_PERIOD times before processing result.
-  for(i = 0; i < FILTER_PERIOD; i++) {
-    if(motor_step & 1){         // If BLDC step is odd (001, 011 or 101).
-      if(!(ACSR & 0b00100000)){ // If 0 detected on ACO (comparator output), delay debouncing.
-        i -= 1;
-      }
-    }
-    else{                       // If BLDC step is even (000, 010 or 100).
-      if((ACSR & 0b00100000)){  // If 1 detected on ACO (comparator output), delay debouncing.
-        i -= 1;
-      }
-    }
-  }
-
-  motor_phase_state();
+  commutation_step ++;        // Advance commutation step by one.
+  commutation_step %= 6;
 }
