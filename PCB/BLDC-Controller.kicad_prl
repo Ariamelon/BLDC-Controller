@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 31,
+    "active_layer": 0,
     "active_layer_preset": "All Layers",
     "auto_track_width": true,
     "hidden_netclasses": [],
@@ -77,7 +77,7 @@
         "name": "BLDC-Controller.kicad_sch",
         "open": true,
         "window": {
-          "display": 0,
+          "display": 2,
           "maximized": true,
           "pos_x": -8,
           "pos_y": -8,
@@ -89,7 +89,7 @@
         "name": "BLDC-Controller.kicad_pcb",
         "open": true,
         "window": {
-          "display": 0,
+          "display": 2,
           "maximized": true,
           "pos_x": -8,
           "pos_y": -8,
