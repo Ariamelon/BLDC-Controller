@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "Arduino.h"
 #include "UART_Comms.h"
 
