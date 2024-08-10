@@ -60,14 +60,16 @@ int main(void){
       delay(10);
     }
 
-    if (pwm_new_duty <= 0){                 // Intepret as motor stop command.
-      pwm_new_duty = 0;
+    if (pwm_new_duty < pwm_min_duty){
+      if (pwm_new_duty > pwm_old_duty){     // Constrain lower limit.
+        pwm_new_duty = pwm_min_duty;        // Interpret as motor start command.
+      }
+      else{
+        pwm_new_duty = 0;                   // Interpret as motor stop command.
+      }
     }
     else if (pwm_new_duty > PWM_MAX_DUTY){  // Constrain upper limit.
       pwm_new_duty = PWM_MAX_DUTY;
-    }
-    else if (pwm_new_duty < pwm_min_duty){  // If motor stop command not sent, constrain lower limit.
-      pwm_new_duty = pwm_min_duty;
     }
 
     if (pwm_new_duty != pwm_old_duty){      // Ignore command if value is unchanged.
