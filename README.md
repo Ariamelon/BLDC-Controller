@@ -2,7 +2,7 @@
 A brushless DC motor controller developed in partial fulfilment of the requirements for the degree of BEng (Hons) Electronic & Computer Engineering at the University of Brighton.
 
 ## Disclaimer
-This board is licensed under CC BY 4.0.
+This board is licensed under CERN-OHL-S-2.0.
 
 ![Image 1](Documentation/Image-1.jpeg)
 ![Image 2](Documentation/Image-2.jpeg)
