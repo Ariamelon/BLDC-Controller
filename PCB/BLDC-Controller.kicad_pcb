@@ -6,10 +6,11 @@
 
   (paper "A5")
   (title_block
-    (title "XE636 BLDC Motor Controller")
-    (date "2024-03-09")
-    (rev "V1.0")
-    (company "Aria Tso")
+    (title "BLDC Motor Controller")
+    (date "2024-04-08")
+    (rev "V1.1")
+    (company "Ariamelon")
+    (comment 1 "https://github.com/Ariamelon/BLDC-Controller/")
   )
 
   (layers
@@ -61,8 +62,8 @@
     (pad_to_mask_clearance 0)
     (grid_origin 170.942 56.007)
     (pcbplotparams
-      (layerselection 0x0000000_fffffffe)
-      (plot_on_all_layers_selection 0x0001010_00000000)
+      (layerselection 0x0000000_7fffffff)
+      (plot_on_all_layers_selection 0x0001020_00000000)
       (disableapertmacros false)
       (usegerberextensions false)
       (usegerberattributes false)

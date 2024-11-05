@@ -1,5 +1,5 @@
 # BLDC motor controller
-A brushless DC motor controller developed in partial fulfilment of the requirements for the degree of BEng (Hons) Electronic & Computer Engineering at the University of Brighton.
+A brushless DC motor controller developed in partial fulfilment of the requirements for a degree of BEng (Hons) Electronic & Computer Engineering.
 
 ## Disclaimer
 The hardware is licensed under CERN-OHL-S-2.0, and the firmware is licensed under GNU GPLv3. 

@@ -8,9 +8,8 @@
     (title "BLDC Motor Controller")
     (date "2024-04-08")
     (rev "V1.1")
-    (company "Aria Tso")
-    (comment 1 "University of Brighton")
-    (comment 2 "School of Architecture, Technology and Engineering")
+    (company "Ariamelon")
+    (comment 1 "https://github.com/Ariamelon/BLDC-Controller/")
   )
 
   (lib_symbols
